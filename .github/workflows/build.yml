@@ -6,17 +6,12 @@ on:
   pull_request:
   push:
     # Preview
-    branches: [ main ]
+    branches: [ main, trigger_ci ]
     # Stable
     tags: [ "v*" ]
   release:
     types:
       - published
-  workflow_call:
-    inputs:
-      dotnet_version:
-        required: true
-        type: string
 
 jobs:
   build:
