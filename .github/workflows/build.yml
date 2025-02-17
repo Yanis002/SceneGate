@@ -51,13 +51,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: "Artifacts"
-          retention-days: 7
           path: |
             build/artifacts/
             !build/artifacts/docs
-
-      - name: Publish docs artifact to CI
-        if: ${{ matrix.is_main_build }}
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: build/artifacts/docs
