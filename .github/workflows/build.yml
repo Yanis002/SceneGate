@@ -48,7 +48,7 @@ jobs:
 
       - name: "Publish artifacts to CI"
         if: ${{ matrix.is_main_build }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "Artifacts"
           retention-days: 7
